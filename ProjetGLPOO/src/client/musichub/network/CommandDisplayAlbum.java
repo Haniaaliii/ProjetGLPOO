@@ -2,7 +2,7 @@ package client.musichub.network;
 
 /**
  * Etablie un protocole avec le serveur afin d'obtenir la liste des albums disponibles.
- * @author Haïdi
+ * 
  *
  */
 public class CommandDisplayAlbum implements Command{
