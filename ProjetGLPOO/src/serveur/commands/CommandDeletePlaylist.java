@@ -11,8 +11,8 @@ import serveur.musichub.business.NoPlayListFoundException;
 import serveur.musichub.business.PlayList;
 
 /**
- * Protocole établie avec le client afin de supprimer la playlsit souhaité
- * @author Hania
+ * Protocole Ã©tablie avec le client afin de supprimer la playlsit souhaitÃ©
+ * 
  *
  */
 public class CommandDeletePlaylist implements Command {
