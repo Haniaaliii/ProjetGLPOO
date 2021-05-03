@@ -9,7 +9,7 @@ import serveur.musichub.business.MusicHub;
 
 /**
  * Etablie un protocole avec le client pour lui envoyer la liste d'album
- * @author Hania
+ * 
  *
  */
 public class CommandSendAlbums implements Command {
