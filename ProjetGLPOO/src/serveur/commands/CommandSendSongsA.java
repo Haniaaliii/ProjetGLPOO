@@ -10,7 +10,7 @@ import serveur.musichub.business.NoAlbumFoundException;
 
 /**
  * Etablie un protocole avec le client pour lui envoyer la liste des musiques d'un album
- * @author Hania
+ * 
  *
  */
 public class CommandSendSongsA implements Command {
