@@ -8,7 +8,7 @@ import serveur.main.ClientLoop;
 
 /**
  * Class principale du serveur 
- * @author Hania
+ * 
  *
  */
 public class Main {
@@ -24,10 +24,10 @@ public class Main {
 	}
 	
 	/**
-	 * Méthode start()
+	 * MÃ©thode start()
 	 * 
 	 * <p>
-	 * Utilsée pour lancer le serveur, récupérer les clients et lancer un thread pour chaque client permettant de communiquer avec plusieurs en même temps
+	 * UtilsÃ©e pour lancer le serveur, rÃ©cupÃ©rer les clients et lancer un thread pour chaque client permettant de communiquer avec plusieurs en mÃªme temps
 	 * </p>
 	 */
 	public void start() {
@@ -48,8 +48,8 @@ public class Main {
 	}
 	
 	/**
-	 * Méthode de base
-	 * @param args non utilisé ici
+	 * MÃ©thode de base
+	 * @param args non utilisÃ© ici
 	 */
 	public static void main(String[] args) {
 		Main mc = new Main();
