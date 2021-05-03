@@ -9,8 +9,8 @@ import client.musichub.network.ServerConnexion;
 import client.musichub.sound.MusicLoader;
 
 /**
- * Classe principale du client qui gère toute les requêtes
- * @author Haïdi
+ * Classe principale du client qui gÃ¨re toute les requÃªtes
+ * 
  */
 public class Main {
 	
@@ -29,7 +29,7 @@ public class Main {
 	}
 	
 	/**
-	 * Méthode qui lance toute la logique et gère la communication client -> serveur
+	 * MÃ©thode qui lance toute la logique et gÃ¨re la communication client -> serveur
 	 * 
 	 * @throws Exception
 	 */
@@ -54,7 +54,7 @@ public class Main {
 	}
 	
 	/**
-	 * Méthode de lancement de l'application client
+	 * MÃ©thode de lancement de l'application client
 	 * 
 	 * @param args
 	 */
