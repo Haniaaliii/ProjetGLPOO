@@ -3,8 +3,8 @@ package client.musichub.network;
 import java.util.Scanner;
 
 /**
- * Etablie un protocole avec le serveur afin de supprimer les playlists créées
- * @author Haïdi
+ * Etablie un protocole avec le serveur afin de supprimer les playlists crÃ©Ã©es
+ * 
  *
  */
 public class CommandDeletePlaylist implements Command {
