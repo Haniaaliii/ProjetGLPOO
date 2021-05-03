@@ -13,8 +13,8 @@ import serveur.musichub.business.NoPlayListFoundException;
 import serveur.musichub.business.PlayList;
 
 /**
- * Protocole utilisé pour communiquer avec un client qui souhaite créer un playlist
- * @author Hania
+ * Protocole utilisÃ© pour communiquer avec un client qui souhaite crÃ©er un playlist
+ * 
  *
  */
 public class CommandCreatePlaylist implements Command {
