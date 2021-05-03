@@ -1,15 +1,15 @@
 package client.musichub.network;
 
 /**
- * Classe permettant d'établir le Design Pattern Commande
- * @author Haïdi
+ * Classe permettant d'Ã©tablir le Design Pattern Commande
+ * 
  *
  */
 public interface Command {
 	
 	/**
-	 * Methode clé dans le design pattern Commande.
-	 * Elle sera utilisée par le manager de commande et répondra aux différents protocoles établie dans les classes où cette interface est implémentée.
+	 * Methode clÃ© dans le design pattern Commande.
+	 * Elle sera utilisÃ©e par le manager de commande et rÃ©pondra aux diffÃ©rents protocoles Ã©tablie dans les classes oÃ¹ cette interface est implÃ©mentÃ©e.
 	 * 
 	 */
 	public void execute();
