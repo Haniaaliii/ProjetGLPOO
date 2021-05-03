@@ -3,8 +3,8 @@ package client.musichub.network;
 import java.util.Scanner;
 
 /**
- * Etablie un protocole avec le serveur afin d'obtenir les musiques présentes dans un album
- * @author Haïdi
+ * Etablie un protocole avec le serveur afin d'obtenir les musiques prÃ©sentes dans un album
+ * 
  *
  */
 public class CommandSongsAlbum implements Command {
