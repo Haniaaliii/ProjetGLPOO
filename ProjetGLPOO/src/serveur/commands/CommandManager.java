@@ -10,7 +10,7 @@ import serveur.musichub.business.MusicHub;
 
 /**
  * Classe qui permet l'utilisation du pattern Commande
- * @author Hania
+ * 
  *
  */
 public class CommandManager {
@@ -25,11 +25,11 @@ public class CommandManager {
 	
 	/**
 	 * Constructeur de la classe
-	 * @param theHub injection de dépendance
-	 * @param out injection de dépendance
-	 * @param outPrint injection de dépendance
-	 * @param in injection de dépendance
-	 * @param socket injection de dépendance
+	 * @param theHub injection de dÃ©pendance
+	 * @param out injection de dÃ©pendance
+	 * @param outPrint injection de dÃ©pendance
+	 * @param in injection de dÃ©pendance
+	 * @param socket injection de dÃ©pendance
 	 */
 	public CommandManager(MusicHub theHub,OutputStream out, PrintWriter outPrint, BufferedReader in, Socket socket) {
 		this.commands = new HashMap<>();
@@ -42,7 +42,7 @@ public class CommandManager {
 	}
 	
 	/**
-	 * permet d'éxecuter la commande souahité
+	 * permet d'Ã©xecuter la commande souahitÃ©
 	 * @param cmd nom de la commande
 	 */
 	public void executeCommand(String cmd) {
@@ -52,7 +52,7 @@ public class CommandManager {
 	}
 	
 	/**
-	 * ajoute les différentes commande à la liste
+	 * ajoute les diffÃ©rentes commande Ã  la liste
 	 */
 	public void createCommands() {
 		this.commands.put("t", new CommandSendAlbums());
@@ -64,7 +64,7 @@ public class CommandManager {
 	}
 	
 	/**
-	 * vérifie que la commande éxiste
+	 * vÃ©rifie que la commande Ã©xiste
 	 * @param cmd
 	 * @return
 	 */
