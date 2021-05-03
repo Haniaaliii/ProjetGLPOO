@@ -9,7 +9,7 @@ import client.musichub.sound.MusicThread;
 
 /**
  * Etablie le protocole pour jouer une musique a partir du serveur distant.
- * @author Haïdi
+ * 
  *
  */
 public class CommandPlayMusic implements Command{
