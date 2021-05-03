@@ -1,8 +1,8 @@
 package client.musichub.network;
 
 /**
- * Permet d'établir un protocole où le client reçois les informations sur les livres audio du serveur
- * @author Haïdi
+ * Permet d'Ã©tablir un protocole oÃ¹ le client reÃ§ois les informations sur les livres audio du serveur
+ * 
  *
  */
 public class CommandAudioBooks implements Command {
