@@ -3,8 +3,8 @@ package client.musichub.network;
 import java.util.HashMap;
 
 /**
- * Classe clée au sein du pattern Commande, et implémentant aussi le design pattern singleton, elle permet d'utiliser les différentes commandes enregistrées sans pour autant en connaitre le contenue
- * @author Haïdi
+ * Classe clÃ©e au sein du pattern Commande, et implÃ©mentant aussi le design pattern singleton, elle permet d'utiliser les diffÃ©rentes commandes enregistrÃ©es sans pour autant en connaitre le contenue
+ * 
  *
  */
 public class CommandManager {
@@ -21,7 +21,7 @@ public class CommandManager {
 	}
 	
 	/**
-	 * Méthode qui permet d'éxecuter une commande et son protocole
+	 * MÃ©thode qui permet d'Ã©xecuter une commande et son protocole
 	 * @param cmd
 	 */
 	public void executeCommand(String cmd) {
@@ -31,7 +31,7 @@ public class CommandManager {
 	}
 	
 	/**
-	 * Méthode qui ajoute toutes les commande gérées par le manager
+	 * MÃ©thode qui ajoute toutes les commande gÃ©rÃ©es par le manager
 	 */
 	public void createCommands() {
 		addCommand("h",new CommandList());
@@ -44,7 +44,7 @@ public class CommandManager {
 	}
 	
 	/**
-	 * Vérifie qu'une commande existe
+	 * VÃ©rifie qu'une commande existe
 	 * @param cmd nom de la commande
 	 * @return vrai si la commande existe, faux si ce n'est pas le cas
 	 */
@@ -55,7 +55,7 @@ public class CommandManager {
 	/**
 	 * Permet l'ajout d'une commande dans la liste
 	 * @param name nom de la commande
-	 * @param command commande implémentant l'interface Command
+	 * @param command commande implÃ©mentant l'interface Command
 	 */
 	public void addCommand(String name, Command command) {
 		this.commands.put(name, command);
