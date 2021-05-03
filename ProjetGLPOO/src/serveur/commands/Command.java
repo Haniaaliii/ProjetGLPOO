@@ -12,8 +12,8 @@ import java.net.Socket;
 import serveur.musichub.business.MusicHub;
 
 /**
- * Classe permettant d'établir le Design Pattern Commande
- * @author Hania
+ * Classe permettant d'Ã©tablir le Design Pattern Commande
+ * 
  *
  */
 public interface Command {
