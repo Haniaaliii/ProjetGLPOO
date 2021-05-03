@@ -11,8 +11,8 @@ import serveur.musichub.business.AudioElement;
 import serveur.musichub.business.MusicHub;
 
 /**
- * Etablie un protocole avec le client pour lui envoyer la musique qu'il souhaite écouter
- * @author Hania
+ * Etablie un protocole avec le client pour lui envoyer la musique qu'il souhaite Ã©couter
+ *
  *
  */
 public class CommandSendMusic implements Command{
