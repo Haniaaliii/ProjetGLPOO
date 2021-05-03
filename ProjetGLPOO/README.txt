@@ -1,5 +1,6 @@
-IMPORTANT : 
-Pour tester le lancement d'une musique on peut le faire avec la musique Friday
+<h6>IMPORTANT</h6>
+Les seules musiques écoutables sont celles présentes dans le dossier music c'est à dire : Friday, Mamma Mia, Dancing Queen.
+Pour pouvoir tester l'application il faudra donc utiliser ces dernières
 
 Marche parfaitement sur eclipse.
 
