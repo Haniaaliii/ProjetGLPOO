@@ -1,3 +1,6 @@
+IMPORTANT : 
+Pour tester le lancement d'une musique on peut le faire avec la musique Friday
+
 Marche parfaitement sur eclipse.
 
 Installation sur eclipse :
