@@ -2,7 +2,7 @@ package client.musichub.network;
 
 /**
  * Protocole simple sans liens ave le serveur pour avoir la liste des commandes
- * @author Haïdi
+ * 
  *
  */
 public class CommandList implements Command{
