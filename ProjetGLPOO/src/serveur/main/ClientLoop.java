@@ -24,8 +24,8 @@ import serveur.musichub.business.Song;
 
 /**
  *
- * Classe utilisée par les thread gérant les clients
- * @author Hania
+ * Classe utilisÃ©e par les thread gÃ©rant les clients
+ * 
  *
  */
 public class ClientLoop implements Runnable {
@@ -40,12 +40,12 @@ public class ClientLoop implements Runnable {
 	String DIR = System.getProperty("user.dir");
 	
 	/**
-	 * Class qui gère un client
+	 * Class qui gÃ¨re un client
 	 * <p>
-	 * Contient tout le nécessaire pour l'application musichub
+	 * Contient tout le nÃ©cessaire pour l'application musichub
 	 * </p>
 	 * @param socket correspondant au client souhaitant utiliser l'application
-	 * @param main simple référence au main
+	 * @param main simple rÃ©fÃ©rence au main
 	 */
 	public ClientLoop(Socket socket, Main main) {
 		this.socket = socket;
