@@ -9,7 +9,7 @@ import java.net.Socket;
 
 /**
  * Thread qui permet d'envoyer la musique au client
- * @author Hania
+ * 
  *
  */
 public class MusicThread implements Runnable {
