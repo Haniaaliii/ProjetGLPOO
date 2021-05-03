@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 import javax.sound.sampled.AudioInputStream;
 
+import client.musichub.network.CommandManager;
 import client.musichub.network.ServerConnexion;
 import client.musichub.sound.MusicLoader;
 
 /**
  * Classe principale du client qui gère toute les requêtes
- * @author Haidi
+ * @author Haïdi
  */
 public class Main {
 	
@@ -33,260 +34,22 @@ public class Main {
 	 * @throws Exception
 	 */
 	public void start() throws Exception {
-		sc = new ServerConnexion("localhost", 5213);
-		ml = new MusicLoader();
+		sc = ServerConnexion.getInstance("localhost", 5213);
+		ml = MusicLoader.getInstance();
 		sc.sendMessage("OK");
+		CommandManager cmdMan = CommandManager.getInstance();
 		while(true) {
 			
 			String msg = sc.getMessage();
-			System.out.println("msg = " + msg);
-			String outMsg = scan.nextLine();
+			String outMsg="error";
+			do {
+				System.out.println("msg = " + msg);
+				outMsg = scan.nextLine();
+			}while(!cmdMan.commandExists(outMsg));
 			sc.sendMessage(outMsg);
-			int lines;
 			
-			switch(outMsg) {
-				case "h":
-					for(int i = 0;i<13;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					break;
-				case "t":
-					msg = sc.getMessage();
-					lines = Integer.parseInt(msg);
-					System.out.println(lines);
-					for(int i = 0;i<=lines;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					break;
-				case "d":
-				case "g":
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					msg = sc.getMessage();
-					lines = Integer.parseInt(msg);
-					for(int i = 0;i<=lines;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					lines = Integer.parseInt(msg);
-					for(int i = 0;i<lines;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					break;
-				case "u":
-					msg = sc.getMessage();
-					lines = Integer.parseInt(msg);
-					for(int i = 0;i<=lines;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					break;
-				case "c":
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					break;
-				case "a":
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					break;
-				case "+":
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					msg = sc.getMessage();
-					lines = Integer.parseInt(msg);
-					for(int i = 0;i<=lines;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					msg = sc.getMessage();
-					lines = Integer.parseInt(msg);
-					for(int i = 0;i<=lines;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					break;
-				case "l":
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					break;
-				case "p":
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					msg = sc.getMessage();
-					lines = Integer.parseInt(msg);
-					for(int i = 0;i<=lines;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					
-					boolean stillAdd = true;
-					do{
-						msg = sc.getMessage();
-						System.out.println(msg);
-						
-						outMsg = scan.nextLine();
-						sc.sendMessage(outMsg);
-						
-						if(outMsg.equals("n")) stillAdd = false;
-					}while(stillAdd);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					break;
-				case "-":
-					msg = sc.getMessage();
-					System.out.println(msg);
-					msg = sc.getMessage();
-					lines = Integer.parseInt(msg);
-					for(int i = 0;i<=lines;i++) {
-						msg = sc.getMessage();
-						System.out.println(msg);
-					}
-					
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					
-					break;
-				case "s":
-					msg = sc.getMessage();
-					System.out.println(msg);
-					break;
-				case "m":
-					
-					msg = sc.getMessage();
-					System.out.println(msg);
-					outMsg = scan.nextLine();
-					sc.sendMessage(outMsg);
-					AudioInputStream music = sc.getAudio();
-					ml.listenMusicAIS(music);
-					
-					sc.sendMessage("ok");
-					//System
-					break;
-			}
+			//Lance la commande que l'utilisateur souhaite lancer
+			cmdMan.executeCommand(outMsg);
 		}
 	}
 	

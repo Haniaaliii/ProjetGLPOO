@@ -8,7 +8,7 @@ import serveur.main.ClientLoop;
 
 /**
  * Class principale du serveur 
- * @author hania
+ * @author Hania
  *
  */
 public class Main {

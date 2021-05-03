@@ -16,13 +16,17 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 /**
  * 
  * Classe utilisée pour effectuer une connexion au serveur.
- * @author Haidi
+ * 
+ * Respecte le design pattern Singleton car une seule instance de connexion au serveur doit être réalisée du côté client et doit pouvoir être accessible partout.
+ * 
+ * @author Haïdi
  */
 public class ServerConnexion {
 	
 	public PrintWriter out;
 	public BufferedReader in;
 	public Socket socket;
+	private static ServerConnexion instance;
 	
 	/**
 	 * Constructeur de la classe de connexion au serveur
@@ -94,6 +98,19 @@ public class ServerConnexion {
 	public void sendMessage(String msg) {
 		out.println(msg);
 		out.flush();
+	}
+	
+	/**
+	 * Fonction qui retourne l'instance du singleton
+	 * @param ip paramètre nécessaire lorsque l'on sait que l'on doit initialiser la connexion au serveur
+	 * @param port paramètre nécessaire lorsque l'on sait que l'on doit initialiser la connexion au serveur
+	 * @return
+	 */
+	public static ServerConnexion getInstance(String ip, int port) {
+		if(instance == null) {
+			instance = new ServerConnexion(ip, port);
+		}
+		return instance;
 	}
 
 }

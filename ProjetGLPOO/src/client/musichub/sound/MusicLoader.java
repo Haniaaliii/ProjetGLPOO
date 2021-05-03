@@ -7,12 +7,17 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
 
 /**
- * 
+ * Classe répondant au Design Pattern Singleton car il n'y a besoin d'initialiser qu'un seul MusicLoader
  * @author Haidi
  *
  */
 public class MusicLoader {
 
+	/**
+	 * Instance du Singleton
+	 */
+	private static MusicLoader instance;
+	
 	/**
 	 * Méthode utilisée pour lire une source AudioInputStream (donc une musique ou livre audio).
 	 * @param ais source de la musique sous la forme d'AudioInputStream
@@ -34,6 +39,17 @@ public class MusicLoader {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * Permet d'obtenir l'instance du Singleton
+	 * @return
+	 */
+	public static MusicLoader getInstance() {
+		if(instance == null) {
+			instance = new MusicLoader();
+		}
+		return instance;
 	}
 	
 }
