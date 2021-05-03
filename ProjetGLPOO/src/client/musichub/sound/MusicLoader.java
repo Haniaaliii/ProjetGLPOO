@@ -7,8 +7,8 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
 
 /**
- * Classe répondant au Design Pattern Singleton car il n'y a besoin d'initialiser qu'un seul MusicLoader
- * @author Haidi
+ * Classe rÃ©pondant au Design Pattern Singleton car il n'y a besoin d'initialiser qu'un seul MusicLoader
+ * 
  *
  */
 public class MusicLoader {
@@ -19,7 +19,7 @@ public class MusicLoader {
 	private static MusicLoader instance;
 	
 	/**
-	 * Méthode utilisée pour lire une source AudioInputStream (donc une musique ou livre audio).
+	 * MÃ©thode utilisÃ©e pour lire une source AudioInputStream (donc une musique ou livre audio).
 	 * @param ais source de la musique sous la forme d'AudioInputStream
 	 */
 	public void listenMusicAIS(AudioInputStream ais) {
@@ -35,7 +35,7 @@ public class MusicLoader {
 				line.write(samples, 0, count);
 				//System.out.println("PPP");
 			}
-			System.out.println("écoute finie");
+			System.out.println("Ã©coute finie");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
