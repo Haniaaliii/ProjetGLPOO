@@ -15,11 +15,11 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 /**
  * 
- * Classe utilisée pour effectuer une connexion au serveur.
+ * Classe utilisÃ©e pour effectuer une connexion au serveur.
  * 
- * Respecte le design pattern Singleton car une seule instance de connexion au serveur doit être réalisée du côté client et doit pouvoir être accessible partout.
+ * Respecte le design pattern Singleton car une seule instance de connexion au serveur doit Ãªtre rÃ©alisÃ©e du cÃ´tÃ© client et doit pouvoir Ãªtre accessible partout.
  * 
- * @author Haïdi
+ * 
  */
 public class ServerConnexion {
 	
@@ -31,7 +31,7 @@ public class ServerConnexion {
 	/**
 	 * Constructeur de la classe de connexion au serveur
 	 * <p>
-	 * Lance une connexion au serveur et initialise les différent composants
+	 * Lance une connexion au serveur et initialise les diffÃ©rent composants
 	 * </p>
 	 * 
 	 * @param ip l'adresse ipv4 du serveur
@@ -57,7 +57,7 @@ public class ServerConnexion {
 	}
 	
 	/**
-	 * Fonction utilisée pour attendre et recevoir un message du serveur.
+	 * Fonction utilisÃ©e pour attendre et recevoir un message du serveur.
 	 * @return retourne le message attendu.
 	 */
 	public String getMessage() {
@@ -75,7 +75,7 @@ public class ServerConnexion {
 	}
 	
 	/**
-	 * Fonction utilisée pour recevoir une musique de la part du serveur.
+	 * Fonction utilisÃ©e pour recevoir une musique de la part du serveur.
 	 * @return retourne un audioInputStream qui sera ensuite lu.
 	 */
 	public AudioInputStream getAudio() {
@@ -92,7 +92,7 @@ public class ServerConnexion {
 	}
 	
 	/**
-	 * Méthode utilisée pour envoyer un message au serveur.
+	 * MÃ©thode utilisÃ©e pour envoyer un message au serveur.
 	 * @param msg message que l'on souhaite envoyer.
 	 */
 	public void sendMessage(String msg) {
@@ -102,8 +102,8 @@ public class ServerConnexion {
 	
 	/**
 	 * Fonction qui retourne l'instance du singleton
-	 * @param ip paramètre nécessaire lorsque l'on sait que l'on doit initialiser la connexion au serveur
-	 * @param port paramètre nécessaire lorsque l'on sait que l'on doit initialiser la connexion au serveur
+	 * @param ip paramÃ¨tre nÃ©cessaire lorsque l'on sait que l'on doit initialiser la connexion au serveur
+	 * @param port paramÃ¨tre nÃ©cessaire lorsque l'on sait que l'on doit initialiser la connexion au serveur
 	 * @return
 	 */
 	public static ServerConnexion getInstance(String ip, int port) {
